@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>BATICHECK | Gestion de chantier</title>
+
+        <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <link rel="shortcut icon" href="assets/images/logo.png">
+
+        <!-- DataTables -->
+        <link href="plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- Responsive datatable examples -->
+        <link href="plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <div class="topbar-left">
+                    <a href="index.html" class="logo">
+    
+                    </a>
+                </div>
+    
+                <nav class="navbar-custom">
+                    <ul class="navbar-right list-inline float-right mb-0">
+    
+    
+    
+    
+    
+                        <li class="dropdown notification-list list-inline-item">
+                            <div class="dropdown notification-list nav-pro-img">
+                                <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#"
+                                    role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="assets/images/logo.png" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                   <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="login.html"><i class="mdi mdi-power text-danger"></i>
+                                        Déconnexion</a>
+                                </div>
+                            </div>
+                        </li>
+    
+                    </ul>
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left waves-effect">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <div class="slimscroll-menu" id="remove-scroll">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu" id="side-menu">
+                            <li class="menu-title">Menu</li>
+                            <li>
+                                <a href="index.html" class="waves-effect">
+                                    <i class="icon-accelerator"></i><span> Tableau de Bord
+                                    </span>
+                                </a>
+                            </li>
+                          
+                          
+                            <li>
+                                <a href="affectation.html" class="waves-effect"><i class="icon-pencil-ruler"></i> <span>
+                                        Affectations </span> </a>
+    
+                            </li>
+    
+                            <li>
+                                <a href="javascript:void(0);" class="waves-effect"><i class='fas fa-user-friends' style="font-size: 18px;" ></i> <span>
+                                        Fournisseurs </span> </a>
+    
+                            </li>
+                         
+                            <!-- <li>
+                                <a href="facturation.html" class="waves-effect"><i class="icon-diamond"></i> <span>
+                                        Facturations</span> </a>
+    
+                            </li> -->
+                            <li>
+                                <a href="etat-de-depense.html" class="waves-effect"><i class="fas fa-money-check-alt"></i><span>
+                                        Etat de dépenses </span></a>
+    
+                            </li>
+                            <li>
+                                <a href="taux.html" class="waves-effect"><i class="fas fa-sync-alt fa-spin"></i><span> Taux
+                                        d'Avancement
+                                    </span> </a>
+                            </li>
+
+                            <li>
+                                <a href="demande.html" class="waves-effect"><i class="icon-ticket"></i><span> Demande de Matériels
+                                    </span> </a>
+                        
+                           
+                            </li>
+                            
+                            <li>
+                                <a href="rapport.html" class="waves-effect"><i class="icon-booknote"></i><span> Rapport de Chantier
+                                    </span> </a>
+    
+                            </li>
+    
+                            <li>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="icon-agenda"></i><span> Dévis <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                                <ul class="submenu">
+                                    <li><a href="bibliotheque.html">Bibliothèque</a></li>
+                                    <li><a href="add-devis.html">Faire un dévis</a></li>
+                                    <li><a href="all-devis.html">Voir tous les Dévis</a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+    
+                    </div>
+                    <!-- Sidebar -->
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                <div class="col-sm-10">
+                                    <h4 class="page-title">Bibliotheque</h4>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".modal-add-biblio">
+                                        <span><i class="mdi mdi-plus-outline" style="font-size: 12px;"></i></span>  Ajouter nouveau
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+        
+                                        
+                                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                            <thead>
+                                            <tr>
+                                                <th>Entité</th>
+                                                <th>Désignation</th>
+                                                <th>Prix Unitaire</th>
+                                                <th>Action</th>
+                                                
+                                            </tr>
+                                            </thead>
+        
+        
+                                            <tbody>
+                                            
+                                          
+                                            <tr>
+                                                <td>INSTALLATION, APPROVIONNEMENT ET <br>
+                                                    REPLI DU CHANTIER</td>
+                                                <td>Installation et repli de chantier </td>
+                                                <td>300 000</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>INSTALLATION, APPROVIONNEMENT ET <br>
+                                                    REPLI DU CHANTIER</td>
+                                                <td>Transport de matériaux de construction </td>
+                                                <td>500 000</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>TERRASSEMENTS</td>
+                                                <td>Nettoyage, décapage, préparation du terrain </td>
+                                                <td>150/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>TERRASSEMENTS</td>
+                                                <td> Fouille pour fondation </td>
+                                                <td>1 200/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>TERRASSEMENTS</td>
+                                                <td> Remblais provenant des fouilles</td>
+                                                <td>1 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>TERRASSEMENTS</td>
+                                                <td> Remblai d'apport compacté </td>
+                                                <td>6 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton de propreté dosé à 150 kg/m3 </td>
+                                                <td>48 500/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour semelles dosé à 350 kg/m3 </td>
+                                                <td>90 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour poutres dosé à 350 kg/m3 </td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <!--  -->
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour poteaux dosé 350 kg/m3 </td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour longrine dosé à 350 kg/m3</td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour linteaux continus </td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour dallettes sous claustras</td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour chaînage haut, interm et vertical  </td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour chaînage rampant </td>
+                                                <td>110 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour porte craie </td>
+                                                <td>85 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <!--  -->
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour placcards et étagère murale  </td>
+                                                <td>85 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour placcards et étagère murale </td>
+                                                <td>85 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton de forme de dallage au sol, épaisseur 8 cm <br> dosé à
+                                                    300kg/m3  </td>
+                                                <td>65 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Fondation et soubassement en parpains pleins de 0,15m</td>
+                                                <td>6 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Béton armé pour chaînage haut, interm et vertical  </td>
+                                                <td>110 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Mur en élévation en agglos creux de 0,12 pour élevation </td>
+                                                <td>5 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Baie en claustras + remplissage du chaînage haut  </td>
+                                                <td>5 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+
+
+                                            <!--  -->
+                                            <tr>
+                                                <td>BETON ET MACONNERIE 
+                                                </td>
+                                                <td>Muret en agglos creux de 0,10 pour placards</td>
+                                                <td>4 750/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE 
+                                                </td>
+                                                <td>Muret en agglos pleins de 0,10 pour étagère murale </td>
+                                                <td>4 750/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td>Perron de deux marches (3 unités) et protection des nez <br>
+                                                    de marche avec des cornières métalliques de 0,25  </td>
+                                                <td>15 000/ml</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE</td>
+                                                <td> Béton armé pour rampe centrale de 1 m de large  </td>
+                                                <td>85 000/m3</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>REVETEMENT</td>
+                                                <td> Enduit externes des fondations et soubassements </td>
+                                                <td>1 700/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>REVETEMENT</td>
+                                                <td> Enduit sur les murs en élevation creux de 0,12</td>
+                                                <td>1 700/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>REVETEMENT </td>
+                                                <td> Enduit de finition des placards  </td>
+                                                <td>1 700/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>REVETEMENT </td>
+                                                <td> Enduit de finition de l'étagère murale </td>
+                                                <td>1 700/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>REVETEMENT </td>
+                                                <td> Chape lissée  </td>
+                                                <td>1 700/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <!--  -->
+                                            <tr>
+                                                <td>CHARPENTE-COUVERTURE </td>
+                                                <td> Couverture en tôles ondulées de 0,25 y compris charpente <br>
+                                                    en bois dur, faîtières et toutes sujétions </td>
+                                                <td>7 250/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>CHARPENTE-COUVERTURE  </td>
+                                                <td> Amarrage fermes en fer plat de 5 mm x 5 cm </td>
+                                                <td>25 000/U</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>CHARPENTE-COUVERTURE  </td>
+                                                <td> Faux plafond en contre plaqué de 4mm </td>
+                                                <td>7 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>HUISSERIE </td>
+                                                <td>Fourniture et pose de 3 fenêtres en panneaux pleins de <br>
+                                                    1,2m x 1,2 m avec barreaux de défense en fers de 16 mm <br>
+                                                    espacés de 15 cm et protégés par des gaines plastiques</td>
+                                                <td>2 000/ml</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>HUISSERIE </td>
+                                                <td> Fourniture et pose de 6 portes métalliques en panneaux <br>
+                                                    pleins de 2,15 m x 1,10 m  </td>
+                                                <td>100 000/U</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>HUISSERIE </td>
+                                                <td> Fourniture et pose de 5 portes métalliques des armoires <br>
+                                                    murales en panneaux pleins de 1,72 m x 0,90 m  </td>
+                                                <td>50 000 /m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BADIGEON - PEINTURE </td>
+                                                <td> Badigeon à la chaux sur enduits en élevation </td>
+                                                <td>550 F/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <!--  -->
+                                            <tr>
+                                                <td>BADIGEON - PEINTURE</td>
+                                                <td> Peinture à huile sur maçonnerie   </td>
+                                                <td>1 600/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BADIGEON - PEINTURE </td>
+                                                <td> Peinture à huile sur menuiserie (planche de rive) </td>
+                                                <td>1 600/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BADIGEON - PEINTURE </td>
+                                                <td> Peinture vinylique sur faux-plafond </td>
+                                                <td>1 200/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BADIGEON - PEINTURE </td>
+                                                <td> Peinture à huile sur huisseries </td>
+                                                <td>1 200/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>IDENTIFICATION DU CHANTIER </td>
+                                                <td> Béton armé pour chaînage haut, interm et vertical  </td>
+                                                <td>110 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Mur en élévation en agglos creux de 0,12 pour élevation </td>
+                                                <td>5 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            <tr>
+                                                <td>BETON ET MACONNERIE </td>
+                                                <td> Baie en claustras + remplissage du chaînage haut  </td>
+                                                <td>5 000/m²</td>
+                                                <td><button type="button" class="btn btn-success waves-effect waves-light" data-toggle="modal" data-target=".modal-edit-biblio">Modifier</button></td>
+                                               
+                                            </tr>
+                                            </tbody>
+                                        </table>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->    
+
+                         
+
+                        
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- content -->
+
+                <!-- modal Modifier -->
+                <div class="modal fade modal-edit-biblio" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title mt-0" id="mySmallModalLabel">Modifier Element</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+
+                                
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="post">
+                                    <input class="form-control" type="" name="depense" id="depense" placeholder="Entité"> <br>
+                                    
+                                    <input class="form-control" type="" name="depense" id="depense" placeholder="Prix Unitaire"> <br>
+
+                                    <select class="form-control">
+                                        <option>Selectionner unité</option>
+                                        <option>m3</option>
+                                        <option>m²</option>
+                                        <option>ml</option>
+                                    </select>
+                                    <br>
+                                    
+                                    <textarea name="" id="" class="form-control" cols="20" rows="5" placeholder="Désignation"></textarea><br>
+
+                                    <div class="row justify-content-center">
+                                        <button type="submit" class="btn btn-primary btn-block m-3">
+                                            Modifier
+                                        </button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <!-- modal ajouter -->
+                <div class="modal fade modal-add-biblio" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title mt-0" id="mySmallModalLabel">Ajouter Nouvel element</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+
+                                
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="post">
+                                    <input class="form-control" type="" name="depense" id="depense" placeholder="Entité"> <br>
+                                    
+                                    <input class="form-control" type="" name="depense" id="depense" placeholder="Prix Unitaire"> <br>
+
+                                    <select class="form-control">
+                                        <option>Selectionner unité</option>
+                                        <option>m3</option>
+                                        <option>m²</option>
+                                        <option>ml</option>
+                                    </select>
+                                    <br>
+                                    
+                                    <textarea name="" id="" class="form-control" cols="20" rows="5" placeholder="Désignation"></textarea><br>
+
+                                    <div class="row justify-content-center">
+                                        <button type="submit" class="btn btn-primary btn-block m-3">
+                                            Ajouter
+                                        </button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
+                <footer class="footer">
+                    © 2020 BATICHECK <span class="d-none d-sm-inline-block"> - Créé  par World Market Commodities</span>.
+                </footer>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/waves.min.js"></script>
+
+        <!-- Required datatable js -->
+        <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="plugins/datatables/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="plugins/datatables/buttons.bootstrap4.min.js"></script>
+        <script src="plugins/datatables/jszip.min.js"></script>
+        <script src="plugins/datatables/pdfmake.min.js"></script>
+        <script src="plugins/datatables/vfs_fonts.js"></script>
+        <script src="plugins/datatables/buttons.html5.min.js"></script>
+        <script src="plugins/datatables/buttons.print.min.js"></script>
+        <script src="plugins/datatables/buttons.colVis.min.js"></script>
+        <!-- Responsive examples -->
+        <script src="plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="assets/pages/datatables.init.js"></script>   
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+
+</html>
